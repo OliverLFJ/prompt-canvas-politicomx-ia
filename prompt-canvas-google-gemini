@@ -1,0 +1,481 @@
+ROL
+Actúa como diseñador de producto y prototipador UX/UI.
+
+Construye un prototipo web NAVEGABLE de una sola pantalla para Político MX,
+basado estrictamente en el MVP definido a continuación.
+
+El objetivo principal del prototipo es demostrar cómo el equipo de RRSS y
+Dirección Editorial puede consultar sus métricas consolidadas y utilizar un
+Agente de IA para generar análisis y reportes personalizados mediante
+instrucciones en lenguaje natural.
+
+IMPORTANTE:
+Este es un prototipo funcional/conceptual.
+Utiliza datos ficticios pero realistas.
+NO agregues fuentes de datos, integraciones o funcionalidades fuera del MVP.
+
+
+==================================================
+1. PROBLEMA
+==================================================
+
+En Político MX existe una dificultad operativa para visualizar de forma
+consolidada las métricas de sus diferentes redes sociales.
+
+Actualmente los datos se encuentran distribuidos entre distintas plataformas,
+por lo que su consolidación manual consume tiempo y dificulta realizar análisis
+y reportes personalizados rápidamente.
+
+La solución busca:
+
+• Consolidar las métricas de redes sociales.
+• Facilitar su visualización.
+• Reducir el trabajo manual.
+• Permitir análisis flexibles mediante IA.
+• Permitir que los usuarios soliciten reportes específicos utilizando
+  lenguaje natural.
+
+
+==================================================
+2. USUARIOS
+==================================================
+
+Usuarios principales:
+
+• Equipo de RRSS
+• Dirección Editorial
+
+
+==================================================
+3. ALCANCE ESTRICTO DEL MVP
+==================================================
+
+El MVP utiliza EXCLUSIVAMENTE:
+
+• Facebook
+• Instagram
+• TikTok
+
+NO incluir:
+
+• X / Twitter
+• YouTube
+• Sitio web de Político MX
+• Google Analytics / GA4
+• Mailchimp
+• Datos de competidores
+• CMS
+• CRM
+• Slack
+• Otras fuentes externas
+
+Estos elementos pertenecen al Parking Lot y NO deben aparecer en:
+
+• tarjetas
+• gráficas
+• filtros
+• métricas
+• análisis
+• recomendaciones
+• reportes
+• ejemplos
+• datos simulados
+• integraciones
+
+
+==================================================
+4. MÉTRICAS DISPONIBLES
+==================================================
+
+El sistema dispone únicamente de las métricas obtenidas de Facebook,
+Instagram y TikTok.
+
+Utilizar métricas como:
+
+• Alcance
+• Visualizaciones
+• Reacciones
+• Interacciones
+• Comentarios
+• Compartidos
+• Clics
+
+Los datos mostrados deben ser ficticios pero realistas.
+
+Mantén consistencia matemática entre los datos del dashboard y las respuestas
+del Agente de IA.
+
+No inventes métricas que no estén disponibles.
+
+
+==================================================
+5. FLUJO CONCEPTUAL DE DATOS
+==================================================
+
+La solución sigue conceptualmente este flujo:
+
+Facebook
+Instagram
+TikTok
+      ↓
+Extracción mediante APIs
+      ↓
+Normalización y consolidación
+      ↓
+Google BigQuery
+      ↓
+Dashboard Web + Agente de IA
+
+BigQuery funciona como almacenamiento centralizado de las métricas y su
+histórico.
+
+No es necesario mostrar toda esta arquitectura técnica al usuario final.
+Debe utilizarse como contexto para diseñar correctamente el producto.
+
+
+==================================================
+6. DASHBOARD
+==================================================
+
+Crear un dashboard moderno de analytics orientado a un medio de comunicación.
+
+Debe mostrar:
+
+• Métricas consolidadas.
+• Rendimiento por plataforma.
+• Comparación entre Facebook, Instagram y TikTok.
+• Evolución de las métricas.
+• Comparaciones entre periodos.
+• Contenidos con mejor rendimiento.
+
+Facebook, Instagram y TikTok deben tener presencia equivalente.
+
+El dashboard resuelve consultas frecuentes y permite visualizar rápidamente
+el estado de las métricas.
+
+Sin embargo, el elemento diferenciador del producto debe ser el Agente de IA.
+
+
+==================================================
+7. AGENTE DE IA
+==================================================
+
+Incluir una sección principal:
+
+"Consultar al Agente"
+
+Stack conceptual:
+
+Google AI Agents
+
+El Agente utiliza exclusivamente los datos consolidados disponibles en
+BigQuery.
+
+Debe permitir que el usuario escriba preguntas en lenguaje natural.
+
+Ejemplos:
+
+"¿Qué contenidos tuvieron mejor rendimiento esta semana?"
+
+"Compara Facebook e Instagram durante este mes."
+
+"¿Qué plataforma tuvo mayor alcance?"
+
+"Muéstrame las publicaciones con más interacciones."
+
+"Compara el alcance de las tres redes contra el mes anterior."
+
+El agente debe responder utilizando exclusivamente los datos disponibles.
+
+
+==================================================
+8. GENERACIÓN DE REPORTES PERSONALIZADOS CON IA
+==================================================
+
+ESTA ES UNA FUNCIONALIDAD CENTRAL DEL MVP.
+
+Agregar un botón destacado:
+
+"Crear reporte con IA"
+
+Al presionarlo, NO generar inmediatamente un reporte predeterminado.
+
+Abrir un modal o panel donde el usuario pueda describir libremente,
+en lenguaje natural, el reporte que necesita.
+
+Título:
+
+"¿Qué reporte necesitas?"
+
+Mostrar un campo amplio de texto.
+
+Placeholder de ejemplo:
+
+"Analiza Facebook e Instagram durante este mes.
+Enfócate en alcance y visualizaciones.
+
+Nuestra meta mensual de alcance es de 2 millones.
+Indica si alcanzamos la meta y, si no, cuánto falta.
+
+Incluye los 5 contenidos con más visualizaciones
+y termina con un resumen ejecutivo."
+
+Agregar botón:
+
+"Generar reporte"
+
+
+==================================================
+9. COMPORTAMIENTO DEL AGENTE PARA REPORTES
+==================================================
+
+El Agente debe interpretar dinámicamente la solicitud del usuario.
+
+Debe poder identificar, cuando se especifiquen:
+
+• Plataformas solicitadas.
+• Periodo.
+• Métricas de interés.
+• Comparaciones.
+• Metas u objetivos numéricos.
+• Condiciones.
+• Rankings o Top N.
+• Estructura deseada del reporte.
+• Nivel de detalle.
+• Tipo de resumen solicitado.
+
+Ejemplo:
+
+Solicitud:
+
+"Genera un reporte de Facebook e Instagram de este mes.
+Enfócate en visualizaciones y alcance.
+La meta es llegar a 2 millones de alcance.
+Si todavía no llegamos, indica cuánto falta.
+Incluye los cinco contenidos con más visualizaciones."
+
+El agente debe interpretar:
+
+FUENTES:
+Facebook + Instagram
+
+PERIODO:
+Mes actual
+
+MÉTRICAS:
+Visualizaciones + alcance
+
+META:
+2,000,000 de alcance
+
+CONDICIÓN:
+Si alcance < 2,000,000, indicar cuánto falta.
+
+EXTRA:
+Top 5 contenidos por visualizaciones.
+
+
+==================================================
+10. RESULTADO DEL REPORTE
+==================================================
+
+Después de interpretar la solicitud, generar un reporte personalizado
+utilizando los datos ficticios disponibles.
+
+Ejemplo visual:
+
+POLÍTICO MX
+REPORTE PERSONALIZADO DE AUDIENCIAS
+
+Periodo: Septiembre
+Fuentes: Facebook + Instagram
+
+RESUMEN EJECUTIVO
+[Resumen generado según la petición]
+
+ALCANCE
+Actual: 1,734,200
+Meta: 2,000,000
+Cumplimiento: 86.7%
+
+META NO ALCANZADA
+Faltan 265,800 de alcance para cumplir el objetivo.
+
+VISUALIZACIONES
+[Datos correspondientes]
+
+TOP 5 CONTENIDOS
+1. ...
+2. ...
+3. ...
+4. ...
+5. ...
+
+CONCLUSIONES
+[Resumen solicitado por el usuario]
+
+El formato y las secciones del reporte NO deben ser siempre iguales.
+
+Deben adaptarse a la solicitud del usuario.
+
+
+==================================================
+11. PRINCIPIO FUNDAMENTAL DEL AGENTE
+==================================================
+
+NO crear únicamente plantillas fijas de reportes.
+
+La finalidad del Agente de IA es permitir solicitudes variables que no
+necesiten haber sido programadas previamente.
+
+El usuario puede combinar libremente:
+
+PLATAFORMAS
++
+PERIODOS
++
+MÉTRICAS
++
+COMPARACIONES
++
+METAS
++
+CONDICIONES
++
+FORMATO DEL REPORTE
+
+Ejemplos:
+
+"Compara TikTok contra Instagram durante los últimos 30 días."
+
+"Dame únicamente Facebook y enfócate en comentarios y compartidos."
+
+"¿Estamos cerca de alcanzar 5 millones de visualizaciones este mes?"
+
+"Genera un reporte ejecutivo de las tres plataformas para Dirección."
+
+"Muéstrame los 10 contenidos con más alcance y compáralos con el periodo
+anterior."
+
+El sistema debe generar una respuesta/reporte diferente dependiendo de
+la necesidad expresada.
+
+
+==================================================
+12. LIMITACIONES DEL AGENTE
+==================================================
+
+La IA es flexible sobre los datos disponibles, pero NO es omnisciente.
+
+Si el usuario solicita información que no existe en el MVP, el agente debe
+indicar claramente que esos datos no están disponibles.
+
+Ejemplo:
+
+Usuario:
+"¿Cuántos usuarios que vieron TikTok terminaron leyendo la nota en
+politico.mx?"
+
+Respuesta esperada:
+
+"El MVP actual no dispone de métricas del sitio web de Político MX,
+por lo que no es posible realizar ese análisis con las fuentes disponibles."
+
+NO inventar información.
+
+NO utilizar fuentes externas para completar datos faltantes.
+
+
+==================================================
+13. INSIGHTS
+==================================================
+
+El dashboard y el agente pueden mostrar:
+
+• Tendencias.
+• Cambios relevantes.
+• Comparaciones.
+• Contenidos con mejor rendimiento.
+• Resúmenes.
+• Oportunidades detectadas a partir de las métricas.
+
+Utilizar el término:
+
+"Insight para Redacción"
+
+o:
+
+"Oportunidad detectada"
+
+NO utilizar:
+
+"Directriz para Redacción"
+
+La IA apoya la interpretación de los datos.
+No toma decisiones editoriales.
+
+
+==================================================
+14. REPORTES AUTOMÁTICOS
+==================================================
+
+NO implementar reportes semanales automáticos.
+
+Los reportes del MVP se generan BAJO DEMANDA a partir de las instrucciones
+del usuario.
+
+Los reportes programados o automáticos pertenecen al Parking Lot.
+
+
+==================================================
+15. DISEÑO
+==================================================
+
+Crear UNA sola pantalla web navegable.
+
+Mantener un diseño profesional de analytics para un medio de comunicación.
+
+Priorizar:
+
+• Claridad visual.
+• Jerarquía de información.
+• Lectura rápida.
+• Gráficas sencillas.
+• Tarjetas de métricas.
+• Comparación entre plataformas.
+• Agente de IA claramente visible.
+• Generación de reportes personalizados como funcionalidad destacada.
+• Facilidad de uso para usuarios no técnicos.
+
+Conservar una apariencia moderna similar a herramientas profesionales
+de analytics.
+
+
+==================================================
+16. REGLA FINAL
+==================================================
+
+Antes de crear cualquier elemento, comprobar que pertenece al MVP.
+
+El prototipo representa exclusivamente:
+
+Facebook + Instagram + TikTok
+          ↓
+        APIs
+          ↓
+Normalización y consolidación
+          ↓
+       BigQuery
+          ↓
+Dashboard + Google AI Agent
+          ↓
+Consultas en lenguaje natural
+          ↓
+Reportes personalizados bajo demanda
+
+El valor principal de la IA es que el usuario NO necesita elegir únicamente
+entre reportes preprogramados.
+
+Debe poder explicar en lenguaje natural qué necesita analizar y cómo desea
+el reporte, y el Agente debe construir el resultado utilizando exclusivamente
+los datos disponibles en el MVP.
