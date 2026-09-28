@@ -25,10 +25,3 @@ Fuera del alcance:
 - Competidores
 - CMS / CRM
 
-## Prompt utilizado
-
----
-
-[PEGAS AQUÍ EL PROMPT COMPLETO]
-
----
